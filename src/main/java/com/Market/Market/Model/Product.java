@@ -22,6 +22,14 @@ public class Product {
     @JsonProperty("description")
     private String description;
 
+    public Product(long id, int catId, String name, String link, double price, String description) {
+        this.id = id;
+        CatId = catId;
+        this.name = name;
+        this.link = link;
+        this.price = price;
+        this.description = description;
+    }
 
     @Override
     public String toString() {

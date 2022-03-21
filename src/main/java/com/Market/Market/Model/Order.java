@@ -15,6 +15,11 @@ public class Order {
     @JsonProperty("productList")
     private List<Product> productList;
 
+    public Order(long id, Customer costumer, List<Product> productList) {
+        this.id = id;
+        this.costumer = costumer;
+        this.productList = productList;
+    }
 
     @Override
     public String toString() {

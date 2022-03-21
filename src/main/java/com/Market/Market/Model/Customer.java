@@ -19,6 +19,14 @@ public class Customer {
     @JsonProperty("address")
     private String address;
 
+    public Customer(long id, String name, String number, String email, String address) {
+        this.id = id;
+        this.name = name;
+        this.number = number;
+        this.email = email;
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
