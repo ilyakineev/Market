@@ -1,7 +1,17 @@
 package com.Market.Market.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+/**
+ * см. класс Customer
+ */
+
+@Data
+@NoArgsConstructor
+@ToString
 public class Product {
     //ID - Уникальный идентификатор int(5)
     @JsonProperty("id")
@@ -22,16 +32,23 @@ public class Product {
     @JsonProperty("description")
     private String description;
 
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", CatId=" + CatId +
-                ", name='" + name + '\'' +
-                ", link='" + link + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                '}';
+    public Product(int catId, String name, String link, double price, String description) {
+        CatId = catId;
+        this.name = name;
+        this.link = link;
+        this.price = price;
+        this.description = description;
     }
+//
+//    @Override
+//    public String toString() {
+//        return "Product{" +
+//                "id=" + id +
+//                ", CatId=" + CatId +
+//                ", name='" + name + '\'' +
+//                ", link='" + link + '\'' +
+//                ", price=" + price +
+//                ", description='" + description + '\'' +
+//                '}';
+//    }
 }
