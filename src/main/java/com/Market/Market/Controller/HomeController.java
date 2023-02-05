@@ -9,4 +9,9 @@ public class HomeController {
     public String home() {
         return "Market API";
     }
+
+    @RequestMapping(value = "/testbranch")
+    public String testBranch() {
+        return "Market API / testbranch";
+    }
 }
